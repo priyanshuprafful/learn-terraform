@@ -1,1 +1,0 @@
-sample2 = "Hello from sample 2 . This is from prod . tfvars file"
