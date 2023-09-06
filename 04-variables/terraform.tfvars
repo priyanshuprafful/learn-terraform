@@ -1,1 +1,1 @@
-sample1 = "Hello from sample 1"
+sample2 = "Hello from sample 2"
