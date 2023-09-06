@@ -5,4 +5,4 @@ data "aws_ami" "ami_my_name" {
 }
 output "ami_id" {
   value = data.aws_ami.ami_my_name.image_id
-} 
+}
