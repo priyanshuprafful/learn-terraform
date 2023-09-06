@@ -11,3 +11,9 @@ variable "sample2" {} # here we are not giving any value , or not declaring samp
 output "sample3" {
   value = var.sample2
 }
+
+variable "cli" {} # again empty variable as we are going to send it from cli
+
+output "cli1" {
+  value = var.cli
+}
