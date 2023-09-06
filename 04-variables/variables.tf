@@ -17,3 +17,5 @@ variable "cli" {} # again empty variable as we are going to send it from cli
 output "cli1" {
   value = var.cli
 }
+
+variable "input" {} 
