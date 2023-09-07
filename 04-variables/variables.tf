@@ -35,5 +35,5 @@ variable "type3" { # this is map type
 }
 
 output "mix_type" {
-  value = "Variable Type1 is ${var.type1} , First value in list is ${var.type2[0]} , Boolean Value of Map is ${var.type3["boolean"]} , Number value of Map is ${var.type3[number]} "
+  value = "Variable Type1 is ${var.type1} , First value in list is ${var.type2[0]} , Boolean Value of Map is ${var.type3["boolean"]} , Number value of Map is ${var.type3["number"]} "
 }
