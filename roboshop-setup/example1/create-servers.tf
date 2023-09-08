@@ -165,5 +165,5 @@ resource "aws_route53_record" "rabbitmq" {
   name    = "rabbitmq-dev.saraldevops.online"
   type    = "A"
   ttl     = 30
-  records = [aws_instance.rabbitmq.private_ip]
+  records = [aws_instance.frontend.private_ip]
 }
