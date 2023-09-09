@@ -24,4 +24,7 @@ variable "instances" {
 output "ec2_info" {
   value = [for k,v in aws_instance.instances:v.public_ip]
 }
+output "ec2_info_with_name" {
+  value = [for key,value in aws_instance.instances : "${key} --- ${value.public_ip}"]
+}
 
