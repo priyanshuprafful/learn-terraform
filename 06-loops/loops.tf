@@ -8,7 +8,7 @@ resource "null_resource" "i_do_nothing" {
 variable "D3" {
   default = ["apple" , "banana"]
 }
-resource "null_resource" "i_do_nothing_1" {
+resource "null_resource" "i_do_nothing_also" {
   count = length(var.D3) # it will do nothing for 5 times but will take input from D3 list
 }                        # we use length as we have a list above
 
