@@ -52,5 +52,5 @@ variable "d1" {
 }
 
 output "courses_name" {
-  value = var.d1.[1].course_name
+  value = var.d1.course_name[1]
 }
