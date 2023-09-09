@@ -28,3 +28,7 @@ variable "D4" {
 resource "null_resource" "i_do_nothing_again" {
   for_each = var.D4
 }
+
+output "Fruits" {
+  value = [for i in var.D3 : upper(i)]
+}
