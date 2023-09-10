@@ -20,7 +20,7 @@ variable "create_instance" {}
 #  ami = "ami-03265a0778a880afb"
 #  instance_type = var.instance_type_1 == "" ? "t3.micro" : var.instance_type_1
 
-}
+#}
 resource "aws_instance" "test" {
   count = var.create_instance ? 2 : 0 # since it is boolean we need give as string == "true"
   ami = "ami-03265a0778a880afb"
