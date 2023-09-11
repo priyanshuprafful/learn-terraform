@@ -6,15 +6,15 @@ data "aws_ami" "ami" {
 
 resource "aws_instance" "ec2"  {
   ami = data.aws_ami.ami.image_id
-  instance_type = "${var.instance_type}"
+  instance_type = "${var.instance_type}" # we can give var.instance_type here also it is the same
   vpc_security_group_ids = ["sg-017c17be83f3872d4"]
   tags = {
-    Name = var.component
+    Name = var.component # here we are not using $ as we are not adding anything along with the component
   }
 }
 resource "aws_route53_record" "record" {
   zone_id = "Z05260162XS3U1UPP64CC"
-  name    = "${var.component}-dev.saraldevops.online"
+  name    = "${var.component}-dev.saraldevops.online" # here we used dollar as we are adding full domain name
   type    = "A"
   ttl     = 30
   records = [aws_instance.ec2.private_ip]
