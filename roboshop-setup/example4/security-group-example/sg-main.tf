@@ -9,7 +9,7 @@ resource "aws_security_group" "allow_tls" {
     to_port          = 0
     protocol         = "-1" # instead of tcp we give -1 which means allow all
     cidr_blocks      = ["0.0.0.0/0"]
-    # so this beomes allow-all kind of a security group . 
+    # so this becomes allow-all kind of a security group .
   }
 
   egress {
