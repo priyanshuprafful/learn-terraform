@@ -5,6 +5,10 @@ module "ec2-module" {
   instance_type = each.value["type"]
 }
 
+module "sg-module" {
+  source = "./security-group-example"
+}
+
 
 variable "instances" {
   default = {
