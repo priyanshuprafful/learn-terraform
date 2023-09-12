@@ -25,5 +25,5 @@ resource "aws_security_group" "allow_tls" {
   }
 }
 output "sg-output-id" {
-  value = aws_security_group.allow_tls.id
+  value = aws_security_group.allow_tls.id # this is the value which we want to share or use in ec2-module
 }

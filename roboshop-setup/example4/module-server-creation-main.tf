@@ -3,11 +3,11 @@ module "ec2-module" {
   source = "./ec2-module"       # ./ is the current working directory and ec2-module is our directory in which
   component = each.value["name"]  # our ec2-module.tf file is there
   instance_type = each.value["type"]
-  sg_from_ec2_variable_id = module.sg-module.sg-output-id
-}
+  sg_from_ec2_variable_id = module.sg-module.sg-output-id # sg-module is the file name of module
+}                        # sg-output-id is the output for the id that we created in sg-module.tf file
 
 module "sg-module" {
-  source = "./security-group-example"
+  source = "./security-group-example" # directory inside where our relevant tf file is present
 }
 
 
