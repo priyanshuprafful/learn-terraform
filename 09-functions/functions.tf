@@ -10,5 +10,5 @@ variable "test" {
 }
 
 output "test-output" {
-  value = var.test
+  value = var.test["catalogue"]
 }
