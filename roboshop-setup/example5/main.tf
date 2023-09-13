@@ -20,7 +20,7 @@ module "route53" {
 }
 
 
-output "ec2" {
-  value = module.ec2 # here we are not giving module.ec2.something as we are testing and checking what
-                      # all things it is returning .
-}
+#output "ec2" {
+#  value = module.ec2 # here we are not giving module.ec2.something as we are testing and checking what
+#                      # all things it is returning .
+#}
