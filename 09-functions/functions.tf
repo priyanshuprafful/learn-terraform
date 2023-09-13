@@ -10,6 +10,6 @@ variable "test" {
 }
 
 output "test-output" {
-  value = var.test
-  value = var.test["catalogue"]
+#  value = var.test # to print whole value
+  value = var.test["catalogue"] # to print catalogue only 
 }
