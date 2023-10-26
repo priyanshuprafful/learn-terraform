@@ -1,34 +1,34 @@
-resource "aws_spot_instance_request" "prometheus_node_1" {
+resource "aws_spot_instance_request" "prom-test-node" {
   ami = "ami-0ce9a5bb4362d4c85"
   instance_type = "t3.micro"
   vpc_security_group_ids = ["sg-017c17be83f3872d4"]
   wait_for_fulfillment = true
 
   tags = {
-    Name = "prom-test-server1"
+    Name = "prom-test-node"
   }
 }
 
-resource "aws_ec2_tag" "prometheus_node_1" {
+resource "aws_ec2_tag" "prom-test-node" {
   key         = "Name"
-  resource_id = aws_spot_instance_request.prometheus_node_1.spot_instance_id
-  value       = "prom-test-server1"
+  resource_id = aws_spot_instance_request.prom-test-node.spot_instance_id
+  value       = "prom-test-node"
 }
 
-resource "aws_spot_instance_request" "prometheus_node_2" {
+resource "aws_spot_instance_request" "prometheus-test-server" {
   ami = "ami-0ce9a5bb4362d4c85"
   instance_type = "t3.micro"
   vpc_security_group_ids = ["sg-017c17be83f3872d4"]
   wait_for_fulfillment = true
 
   tags = {
-    Name = "prom-test-server2"
+    Name = "prometheus-test-server"
 
   }
 }
 
-resource "aws_ec2_tag" "prometheus_node_2" {
+resource "aws_ec2_tag" "prometheus-test-server" {
   key         = "Name"
-  resource_id = aws_spot_instance_request.prometheus_node_2.spot_instance_id
-  value       = "prom-test-server2"
+  resource_id = aws_spot_instance_request.prometheus-test-server.spot_instance_id
+  value       = "prometheus-test-server"
 }
