@@ -9,7 +9,7 @@ resource "aws_spot_instance_request" "prometheus_node_1" {
   }
 }
 
-resource "aws_spot_instance_request" "prometheus_node_1" {
+resource "aws_spot_instance_request" "prometheus_node_2" {
   ami = "ami-0ce9a5bb4362d4c85"
   instance_type = "t3.micro"
 
