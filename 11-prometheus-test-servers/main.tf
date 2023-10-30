@@ -33,4 +33,3 @@ resource "aws_ec2_tag" "prometheus-test-server" {
   resource_id = aws_spot_instance_request.prometheus-test-server.spot_instance_id
   value       = "prometheus-test-server"
 }
-  
