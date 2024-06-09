@@ -13,8 +13,8 @@ resource "aws_instance" "ec2"  {
   }
 }
 resource "aws_route53_record" "record" {
-  zone_id = "Z05260162XS3U1UPP64CC"
-  name    = "${var.component}-dev.saraldevops.online" # here we used dollar as we are adding full domain name
+  zone_id = "Z07013421USQO5ED15QGP" //  "Z05260162XS3U1UPP64CC"
+  name    = "${var.component}-dev.saraldevops.site" # here we used dollar as we are adding full domain name
   type    = "A"
   ttl     = 30
   records = [aws_instance.ec2.private_ip]
